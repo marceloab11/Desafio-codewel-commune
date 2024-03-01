@@ -7,30 +7,49 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
-    <div class="m-3 px-4 py-16 bg-slate-100">
+    <div class="m-3 px-4 py-16 bg-slate-100 md:px-20">
         <header class="flex justify-between">
             <div><img src="../Assets/Logo.svg" alt=""></div>
-            <div><img src="../Assets/Hamburger Menu.svg" alt=""></div>
+            <div class="hidden md:block">
+                <ul class="flex">
+                    <a class="" href=""><li class="px-2 py-1 hover:underline">Features</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Affiliates</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Pricing</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Communities</li></a>
+                    <a href=""><li class="px-2 py-1 rounded-md text-white bg-purple-950">Join Waitlist</li></a>
+                </ul>
+            </div>
+            <div id="menu" class="md:hidden"><img src="../Assets/Hamburger Menu.svg" alt=""></div>
+            <div id="overlay" class=" fixed hidden inset-0 bg-black bg-opacity-50 backdrop-blur-md z-50"></div>
+            <div id="modal" class="absolute hidden top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white p-4 rounded-md z-50">
+                <ul >
+                    <a class="" href=""><li class="px-2 py-1 hover:underline">Features</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Affiliates</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Pricing</li></a>
+                    <a href=""><li class="px-2 py-1 hover:underline">Communities</li></a>
+                    <a href=""><li class="px-2 py-1 rounded-md text-white bg-purple-950">Join Waitlist</li></a>
+                </ul>
+            </div>
         </header>
-        <nav class="flex justify-center">
-            <div class="inline-block  bg-purple-950 rounded-2xl p-1 px-4 mt-20 text-gray-300">We are now allowing early-acess for users.<a class="font-bold" href="">Learn more.</a></div>
+        <nav class="flex justify-center md:justify-start">
+            <div class="inline-block  bg-purple-950 rounded-2xl p-1 px-4 mt-20 md:mt-36 text-gray-300">We are now allowing early-acess for users.<a class="font-bold underline" href="">Learn more.</a></div>
         </nav>
-        <main>
-            <div>
+        <main class="flex">
+            <div class="md:mr-20">
                 <div class="flex flex-col justify-center">
-                    <h1 class="my-4 text-center font-bold text-4xl">Build a highly engaged community with no effort.</h1>
-                    <p class="text-gray-500  text-center">Commune offers the tools you need to build a highly engaged community with little to no effort. Simply setup your Commune workspace, and manage everything from members to content from one central dashboard.</p>
+                    <h1 class="my-4 text-center font-bold text-4xl md:text-5xl md:text-left md:max-w-4xl md:mt-10">Build a highly engaged community with no effort.</h1>
+                    <p class="text-gray-500  text-center md:text-left md:max-w-4xl md:mt-4">Commune offers the tools you need to build a highly engaged community with little to no effort. Simply setup your Commune workspace, and manage everything from members to content from one central dashboard.</p>
                 </div>
-                <div>
-                    <input class="w-full py-1 px-2 rounded-sm bg-white border border-gray-500 placeholder:text-gray-500 my-3" placeholder="Enter your e-mail address" type="email">
-                    <button class="bg-purple-950 py-1 px-2 rounded-sm w-full text-white">Join Waitlist</button>
+                <div class="md:flex md:mt-5 md:-ml-10 md:mx-48">
+                    <input class="w-full py-1 px-2 rounded-sm bg-white border border-gray-500 placeholder:text-gray-500 my-3 md:ml-9 md:h-10 " placeholder="Enter your e-mail address" type="email">
+                    <button class="bg-purple-950 py-1 px-2 rounded-sm w-full md:py-0 md:px-0 md:h-10 md:mt-3 md:ml-4 md:w-40 text-white">Join Waitlist</button>
                 </div>
             </div>
-            <div class="hidden">png</div>
+            <div class="hidden md:-mt-20 md:block"><img class="md:h-full md:w-96" src="../Assets/Illustration.png" alt=""></div>
         </main>
         <footer class="mt-7">
             <p>Used by these companies:</p>
-            <div class=" mt-5 flex justify-between">
+            <div class=" mt-5 flex justify-between md:justify-start md:gap-7">
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">
                     <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"/>
                   </svg></div>
@@ -52,5 +71,6 @@
             </div>
         </footer>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
